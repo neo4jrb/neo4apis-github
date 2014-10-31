@@ -13,9 +13,15 @@ neo4japis_github = Neo4Apis::Github.new(Neo4j::Session.open)
 
 neo4japis_github.batch do
   github_client.issues.list.each do |issue|
+    # Imports:
+    #  * The issue
+    #  * The creator / assignee
+    #  * The repo
+    #  * The owner of the repo
     import :Issue, issue
   end
 end
 
 ```
 
+Current supports importing of User, Issue, and Repository
