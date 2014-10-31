@@ -1,16 +1,9 @@
 PATH
   remote: .
   specs:
-    neo4apis-github (0.0.2)
+    neo4apis-github (0.0.4)
       github_api (~> 0.12.2)
-      neo4apis (~> 0.0.1)
-
-PATH
-  remote: ../neo4apis
-  specs:
-    neo4apis (0.0.2)
-      faraday (~> 0.9.0)
-      neo4j-core (~> 3.0.3)
+      neo4apis (~> 0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -52,7 +45,10 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    neo4j-core (3.0.3)
+    neo4apis (0.1.0)
+      faraday (~> 0.9.0)
+      neo4j-core (~> 3.0.4)
+    neo4j-core (3.0.4)
       activesupport
       faraday (~> 0.9.0)
       faraday_middleware (~> 0.9.1)
@@ -99,7 +95,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  neo4apis!
   neo4apis-github!
   pry
   rspec
