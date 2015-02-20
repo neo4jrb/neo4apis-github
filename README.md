@@ -1,7 +1,7 @@
 
 neo4apis-github is a ruby gem for making importing data from github to neo4j easy
 
-This adapter supports objects created from the `github` gem.
+This adapter supports objects created from the `github_api` gem.
 
 ```ruby
 
@@ -24,4 +24,4 @@ end
 
 ```
 
-Current supports importing of User, Issue, and Repository
+Currently supports importing of User, Issue, Repository, Comment, and Commit entities
