@@ -19,7 +19,7 @@ module Neo4Apis
                                                 :size, :forks_count, :mirror_url,
                                                 :created_at, :updated_at, :pushed_at]
 
-      add_relationship(:has_owner, node, owner_node)
+      add_relationship(:HAS_OWNER, node, owner_node)
 
       node
     end
@@ -31,8 +31,8 @@ module Neo4Apis
       node = add_node :Issue, issue, [:id, :number, :title, :body, :html_url, :comments,
                                       :created_at, :updated_at, :closed_at]
 
-      add_relationship(:has_user, node, user_node)
-      add_relationship(:has_assignee, node, assignee_node) if assignee_node
+      add_relationship(:HAS_USER, node, user_node)
+      add_relationship(:HAS_ASSIGNEE, node, assignee_node) if assignee_node
 
       node
     end
@@ -44,7 +44,7 @@ module Neo4Apis
                                           :position, :line, :path, :commit_id,
                                           :created_at, :updated_at]
 
-      add_relationship(:made_comment, user_node, node)
+      add_relationship(:MADE_COMMENT, user_node, node)
 
       node
     end
@@ -63,8 +63,8 @@ module Neo4Apis
       end
 
 
-      add_relationship(:authored, node, author_node) if author_node
-      add_relationship(:committed, node, committer_node) if committer_node
+      add_relationship(:AUTHORED, author_node, node) if author_node
+      add_relationship(:COMMITTED, committer_node, node) if committer_node
 
       node
     end
